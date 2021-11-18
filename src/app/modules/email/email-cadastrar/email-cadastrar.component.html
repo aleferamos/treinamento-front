@@ -1,0 +1,26 @@
+<p-toast></p-toast>
+<div class="grid">
+    <span class="p-float-label">
+        <input id="float-input" type="text" [(ngModel)]="email" pInputText> 
+        <label for="float-input">Email: </label>
+    </span>
+</div><br>
+<div class="grid">
+    <p-autoComplete class="autoComplete" [dropdown]="true" [forceSelection]="true" [(ngModel)]="pessoaSelecionada" field="nome"
+         placeholder="Selecione o cliente" [suggestions]="pessoasFiltradas" (completeMethod)="filtrarPessoas($event)">
+    </p-autoComplete>
+</div>
+<div class="grid">
+    <label for="float-input">Padrão</label>
+    <div class="p-field-radiobutton">
+        <p-radioButton name="city" value="S" [(ngModel)]="padrao" inputId="city1"></p-radioButton>
+        <label for="city1">Sim</label>
+    </div>
+    <div class="p-field-radiobutton">
+        <p-radioButton name="city" value="N" [(ngModel)]="padrao" inputId="city1"></p-radioButton>
+        <label for="city1">Não</label>
+    </div>
+</div>
+<div class="grid">
+    <button pButton type="button" (click)="salvar()" label="Salvar" ></button>
+</div>

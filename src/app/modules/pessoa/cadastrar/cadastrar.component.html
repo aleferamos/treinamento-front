@@ -1,0 +1,61 @@
+<div class="grid">
+    <span class="p-float-label">
+        <input id="float-input" type="text" [(ngModel)]="nome" pInputText> 
+        <label for="float-input">Nome</label>
+    </span>
+</div><br>
+<div class="grid">
+    <p-calendar   
+      [monthNavigator]="true" placeholder="Data de nascimento"  [readonlyInput]="true" [showButtonBar]="true" [showIcon]="true"
+      [yearNavigator]="true" yearRange="1900:2030" dataType="string" dateFormat="dd/mm/yy" [(ngModel)]="data">
+     </p-calendar>
+</div><br>
+<div class="grid">
+    <span class="p-float-label">
+        <input id="float-input" type="text" [(ngModel)]="cpf" pInputText> 
+        <label for="float-input">Cpf</label>
+    </span>
+</div><br>
+<div class="grid">
+    <div class="p-field-radiobutton">
+        <p-radioButton name="city" value="M" [(ngModel)]="sexo" inputId="city1"></p-radioButton>
+        <label for="city1">Masculino</label>
+    </div>
+    <div class="p-field-radiobutton">
+        <p-radioButton name="city" value="F" [(ngModel)]="sexo" inputId="city1"></p-radioButton>
+        <label for="city1">Femninino</label>
+    </div>
+    <div class="p-field-radiobutton">
+        <p-radioButton name="city" value="O" [(ngModel)]="sexo" inputId="city1"></p-radioButton>
+        <label for="city1">Outro</label>
+    </div>
+</div><br>
+<div class="grid">
+    <span class="p-float-label">
+        <input id="float-input" type="text" [(ngModel)]="inscricaoEstadual" pInputText> 
+        <label for="float-input">Inscricao estadual</label>
+    </span>
+</div><br>
+<div class="grid">
+    <div class="p-field-radiobutton">
+        <p-radioButton name="city" value="A" [(ngModel)]="status" inputId="city1"></p-radioButton>
+        <label for="city1">Ativo</label>
+    </div>
+    <div class="p-field-radiobutton">
+        <p-radioButton name="city" value="I" [(ngModel)]="status" inputId="city1"></p-radioButton>
+        <label for="city1">Inativo</label>
+    </div>
+</div><br>
+<div class="grid">
+    <div class="p-col-3">
+        <p>Tipo</p>
+        <select name="tipo" [(ngModel)]="fisica">
+            <option value="">Selecione</option>
+            <option value="F">Fisica</option>
+            <option value="J">Juridica</option>
+        </select>
+    </div>
+</div><br>
+<div class="grid">
+    <button pButton type="button" label="Salvar" (click)="salvar()"></button>
+</div>
